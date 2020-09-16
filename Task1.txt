@@ -1,0 +1,615 @@
+Exercise1: Mailing Address
+Create a program that displays your name and complete mailing address formatted in the manner that you
+ would usually see it on the outside of an envelope. Your program does not need to read any input from the user.
+
+>>> print('Damira,050000 Òîëå áè 59')
+Damira,050000 Òîëå áè 59
+
+	
+Exercise2: Hello
+Write a program that asks the user to enter his or her name. 
+The program should respond with a message that says hello to the user, using his or her name.
+
+>>> user = input("Please write your name: ")
+Please write your name: Madara
+>>> print('Welcome', user)
+Welcome Madara
+
+Exercise3: Area of a Room
+Write a program that asks the user to enter the width and length of a room.
+ Once the values have been read, your program should compute and display the area of the room. 
+The length and the width will be entered as ?oating point numbers. Include units in your prompt and output message;
+ either feet or meters, depending on which unit you are more comfortable working with.
+
+>>> a = input("Enter the width: ")
+Enter the width: 2.0
+>>> b = input("Enter the length: ")
+Enter the length: 3.5
+>>> a = float(a)
+>>> b = float(b)
+>>> area = a*b
+>>> print("Area of a room: " , area, "m^2.")
+Area of a room:  7.0 m^2.
+
+Exercise4: Area of a Field
+Create a program that reads the length and width of a farmer’s ?eld from the user in feet. Display the area of the ?eld in acres.
+Hint: There are 43,560 square feet in an acre.
+
+>>> a = input("Enter the width(feet): ")
+Enter the width: 450
+>>> b = input("Enter the length(feet): ")
+Enter the length: 620
+>>> a = int(a)
+>>> b = int(b)
+>>> area = a*b/43560
+>>> print("Area of a field",area,"acre")
+Area of a field 6.404958677685951 acre
+
+Exercise5: Bottle Deposits
+In many jurisdictions as mall deposit is added to drink containers to encourage people to recycle them. 
+In one particular jurisdiction, drink containers holding one liter or less have a $0.10 deposit,
+ and drink containers holding more than one liter have a $0.25 deposit. Write a program that reads
+ the number of containers of each size from the user. Your program should continue by computing and 
+displaying the refund that will be received for returning those containers. Format the output so that 
+it includes a dollar sign and always displays exactly two decimal places.
+
+>>> less_deposit = 0.10
+>>> more_deposit= 0.25
+>>> less = float(input("Type a namber of containers: "))
+Type a namber of containers: 22
+>>> more = float(input("Type a namber of containers: "))
+Type a namber of containers: 23
+>>> returned = less_deposit*less + more_deposit*more
+>>> returned = round(returned,2)
+>>> print(returned,"$")
+7.95 $
+
+
+Exercise6: Tax and Tip
+The program that you create for this exercise will begin by reading the cost of 
+a meal ordered at a restaurant from the user. Then your program will compute the tax 
+and tip for the meal. Use your local tax rate when computing the amount of tax owing.
+ Compute the tip as 18 percent of the meal amount (without the tax). 
+The output from your program should include the tax amount, the tip amount, 
+and the grand total for the meal including both the tax and the tip. 
+Format the output so that all the values are displayed using two decimal places.
+
+>>> cost = int(input())
+6000
+>>> tax = cost*0.1
+>>> tip = cost*0.18
+>>> total = cost + tax + tip
+>>> print("%.2f"%total,tip,tax)
+7680.00 1080.0 600.0
+
+
+Exercise7: Sum of the First n Positive Integers
+Write a program that reads a positive integer, n, from the user and then displays the 
+sum of all of the integers from 1 to n. The sum of the ?rst n positive integers can be computed using the formula: sum =(n)(n+1)/2
+
+>>> n = int(input())
+7
+>>> sum = n*(n+1)/2
+>>> print(sum)
+28.0
+
+Exercise8: Widgets and Gizmos
+An online retailer sells two products: widgets and gizmos. Each widget weighs 75 grams. 
+Each gizmo weighs 112 grams. Write a program that reads the number of widgets and the number
+ of gizmos in an order from the user. Then your program should compute and display the total weight of the order.
+
+>>> widgets = int(input())
+22
+>>> gizmos = int(input())
+10
+>>> total = widgets*75 + gizmos*112
+>>> print(total)
+2770
+
+Exercise9: Compound Interest
+Pretendthatyouhavejustopenedanewsavingsaccountthatearns4percentinterest per year.
+ The interest that you earn is paid at the end of the year and is added to the balance of the savings account.
+ Write a program that begins by reading the amount of money deposited into the account from the user.
+ Then your program should compute and display the amount in the savings account after 1, 2, and 3years. 
+Display each amount so that it is rounded to 2 decimal places.
+
+>>> n = int(input())
+100000
+>>> first_year = n*0.04 + n
+>>> second_year = first_year*0.04 + first_year
+>>> third_year = second_year*0.04 + second_year
+>>> print("%.2f"%first_year,second_year,third_year)
+104000.00 108160.0 112486.4
+
+Exercise10: Arithmetic
+Create a program that reads two integers, a and b, from the user. Your program should compute and display:
+•	The sum of a and b
+•	The difference when b is subtracted from a
+•	The product of a and b
+•	The quotient when a is divided by b
+•	The remainder when a is divided by b
+•	The result of log10 a
+•	The result of ab
+Hint: You will probably ?nd the log10 function in the math module helpful for computing the second last item in the list.
+
+>>> a = int(input())
+4
+>>> b = int(input())
+3
+>>> print(a+b)
+7
+>>> print(a-b)
+1
+>>> print(a*b)
+12
+>>> print(a%b)
+1
+>>> print(log(a))
+0.6020599913279624
+>>> print(a**b)
+64
+
+Exercise11: Fuel Ef?ciency
+In the United States, fuel ef?ciency for vehicles is normally expressed in miles-per gallon (MPG). In Canada, fuel ef?
+ciency is normally expressed in liters-per-hundred kilometers (L/100km). Use your research skills to determine how to
+ convert from MPG to L/100km.ThencreateaprogramthatreadsavaluefromtheuserinAmerican units and displays the equivalent fuel ef?ciency in Canadian units.
+
+>>> LITERS_PER_GALLON = 3.785
+>>> KM_PER_MILES = 1.609
+>>> mrg = int(input())
+30
+>>> l_km = (100*LITERS_PER_GALLON)/(KM_PER_MILES*mrg)
+>>> print(l_km, "l/100km")
+7.841309301843796 l/100km
+>>>
+
+
+Exercise12: Distance Between Two Points on Earth
+The surface of the Earth is curved, and the distance between degrees of longitude varies with latitude. 
+As a result, ?nding the distance between two points on the surface of the Earth is more complicated than simply using the Pythagorean theorem.
+ Let (t1, g1) and (t2, g2) be the latitude and longitude of two points on the Earth’s surface. The distance between these points,
+ following the surface of the Earth, in kilometers is: distance=6371.01?arccos(sin(t1)?sin(t2)+cos(t1)?cos(t2)?cos(g1-g2))
+The value 6371.01 in the previous equation was not selected at random. It is the average radius of the Earth in kilometers.
+Create a program that allows the user to enter the latitude and longitude of two points on the Earth in degrees.
+ Your program should display the distance between the points, following the surface of the earth, in kilometers.
+Hint: Python’s trigonometric functions operate in radians. As a result, you will need to convert the user’s input 
+from degrees to radians before computing the distance with the formula discussed previously. The math module contains 
+a function named radians which converts from degrees to radians.
+Find the value of the latitude in radians:
+
+Value of Latitude in Radians, lat = Latitude / (180/pi) OR
+Value of Latitude in Radians, lat = Latitude / 57.29577951
+
+Find the value of longitude in radians:
+Value of Longitude in Radians, long = Longitude / (180/pi) OR
+Value of Longitude in Radians, long = Longitude / 57.29577951
+
+Distance, d = 3963.0 * arccos[(sin(lat1) * sin(lat2)) + cos(lat1) * cos(lat2) * cos(long2 – long1)]
+
+>>> from math import radians, cos, sin, asin, sqrt
+>>> lat1 = float(input("Ener Latitude 1: "))
+Ener Latitude 1: 53.3205
+>>> lat2 = float(input("Ener Latitude 2: "))
+Ener Latitude 2: 53.3186
+>>> lon1 = float(input("Ener Longitude 1: "))
+Ener Longitude 1: -1.7297
+>>> lon2 = float(input("Ener Longitude 2: "))
+Ener Longitude 2: -1.6997
+>>> lat1 = radians(lat1)
+>>> lat2 = radians(lat2)
+>>> lon1 = radians(lon1)
+>>> lon2 = radians(lon2)
+>>> dlon = lon2 - lon1
+>>> dlat = lat2 - lat1
+>>> a = sin(dlat/2)**2 + cos(lat1)*cos(lat2)*sin(dlon/2)**2
+>>> c = 2*asin(sqrt(a))
+>>> r = 6371.01
+>>> distance = c*r
+>>> print(distance)
+2.0038454583795877
+
+
+
+Exercise13: Making Change
+Consider the software that runs on a self-checkout machine. One task that it must be able to perform is to
+ determine how much change to provide when the shopper pays for a purchase with cash. Write a program that begins 
+by reading several cents from the user as an integer. Then your program should compute and display the denominations
+ of the coins that should be used to give that amount of change to the shopper. The change should be given using as few
+ coins as possible. Assume that the machine is loaded with pennies, nickels, dimes, quarters, loonies and toonies.
+A one-dollar coin was introduced in Canada in 1987. It is referred to as a loonie because one side of the coin has 
+a loon (a type of bird) on it. The two-dollar coin, referred to as a toonie, was introduced 9 years later. 
+It’s name is derived from the combination of the number two and the name of the loonie.
+
+>>> CENTS_TOONIE = 200
+>>> CENTS_LOONIE = 100
+>>> CENTS_QUARTER = 25
+>>> CENTS_DIME = 10
+>>> CENTS_NICKEL = 5
+>>> cents = int(input())
+3555
+>>> print(cents//CENTS_TOONIE,"toonies")
+17 toonies
+>>> cents = cents%CENTS_TOONIE
+>>> print(cents, "pennies")
+155 pennies
+
+>>> cents = int(input())
+3555
+>>> print(cents//CENTS_LOONIE,"loonies")
+35 loonies
+>>> cents = cents%CENTS_LOONIE
+>>> print(cents, "pennies")
+55 pennies
+
+>>> cents = int(input())
+3555
+>>> print(cents//CENTS_QUARTER,"quarters")
+142 quarters
+>>> cents = cents%CENTS_QUARTER
+>>> print(cents, "pennies")
+5 pennies
+
+>>> cents = int(input())
+3555
+>>> print(cents//CENTS_DIME,"dimes")
+355 dimes
+>>> cents = cents%CENTS_DIME
+>>> print(cents, "pennies")
+5 pennies
+
+>>> cents = int(input())
+3555
+>>> print(cents//CENTS_NICKEL,"nickels")
+711 nickels
+>>> cents = cents%CENTS_NICKEL
+>>> print(cents, "pennies")
+0 pennies
+
+
+Exercise14: Height Units
+Many people think about their height in feet and inches, even in some countries that primarily 
+use the metric system. Write a program that reads several feet from the user, followed by several inches.
+ Once these values are read, your program should compute and display the equivalent number of centimeters.
+Hint: One foot is 12 inches. One inch is 2.54 centimeters.
+
+>>> feet = int(input("Number of feet: "))
+Number of feet: 23
+>>> inches = int(input("Number of inches: "))
+Number of inches: 11
+>>> height_cm = (feet*12 + inches)*2.54
+>>> print(height_cm)
+728.98
+
+Exercise15: Distance Units
+(20 Lines) In this exercise, you will create a program that begins by reading a measurement in feet from the user. 
+Then your program should display the equivalent distance in inches, yards and miles. 
+Use the Internet to look up the necessary conversion factors if you don’t have them memorized.
+
+>>> d_ft = int(input("Input distance in feet: "))
+Input distance in feet: d_inches = d_ft*12
+>>> d_ft = int(input("Input distance in feet: "))
+Input distance in feet: 100
+>>> d_inches = d_ft*12
+>>> d_yards = d_ft/3.0
+>>> d_miles = d_ft/5280.0
+>>> print("The distance in inches is %i inches." %d_inches)
+The distance in inches is 1200 inches.
+>>> print("The ditance in yards is %.2f yards." %d_yards)
+The ditance in yards is 33.33 yards.
+>>> print("The distance in miles %.2f miles. " %d_miles)
+The distance in miles 0.02 miles.
+
+Exercise16: Area and Volume
+Write a program that begins by reading a radius, r, from the user. The program will continue by computing and
+ displaying the area of a circle with radius r and the volume of a sphere with radius r. Use the pi constant in 
+the math module in your calculations.
+Hint: The area of a circle is computed using the formula area = ?r2. The volume of a sphere is computed using the formula volume= 4 3?r3.
+
+>>> from math import pi
+>>> r = float(input("Enter the radius: "))
+Enter the radius: 10
+>>> area = pi*(r**2)
+>>> volume = 4/3*pi*(r*r*r)
+>>> print("area: ",area, "volume: ", volume)
+area:  314.1592653589793 volume:  4188.790204786391
+
+Exercise17: Heat Capacity
+The amount of energy required to increase the temperature of one gram of a material by one degree Celsius is the material’s speci?c heat capacity, C. 
+The total amount of energy required to raise m grams of a material by ?T degrees Celsius can be computed using the formula: q =mC?T.
+ Write a program that reads the mass of some water and the temperature change from the user. Your program should display the total amount of energy 
+that must be added or removed to achieve the desired temperature change.
+Hint: The speci?c heat capacity of water is 4.186 J g?C. Because water has a density of 1.0 gram per milliliter, you can use grams and milliliters
+ interchangeably in this exercise.
+Extend your program so that it also computes the cost of heating the water. Electricity is normally billed using units of kilowatt hours rather than Joules.
+ In this exercise, you should assume that electricity costs 8.9 cents per kilowatt-hour. Use your program to compute the cost of boiling water for a cup of coffee.
+Exercise17: Heat Capacity 9
+Hint: You will need to look up the factor for converting between Joules and kilowatt hours to complete the last part of this exercise.
+
+>>> m = float(input("Enter the amout of water in millimeters: "))
+Enter the amout of water in millimeters: 270
+>>> t = float(input("Enter the temperature: "))
+Enter the temperature: 45
+>>> WATER_HEAT_CAPACITY = 4.186
+>>> q = m*t*WATER_HEAT_CAPACITY
+>>> print("That will require %d Joules of energy." %q)
+That will require 50859 Joules of energy.
+>>> KOEF = 2.777e-7
+>>> ELECTRICITY_PRICE = 8.9
+>>> cost = q*KOEF*ELECTRICITY_PRICE
+>>> print("%.2f cents." %cost)
+0.13 cents.
+
+
+Exercise18: Volume of a Cylinder
+The volume of a cylinder can be computed by multiplying the area of its circular base by its height.
+ Write a program that reads the radius of the cylinder, along with its height, from the user and computes its volume.
+ Display the result rounded to one decimal place.
+
+>>> from math import pi
+>>> r = float(input("Enter the radius: "))
+Enter the radius: 5
+>>> h = float(input("Enter the height: "))
+Enter the height: 3.2
+>>> v = pi*(r**2)*h
+>>> print("%.1f" %v)
+251.3
+
+
+
+Exercise19: Free Fall
+Create a program that determines how quickly an object is traveling when it hits the ground.
+ The user will enter the height from which the object is dropped in meters(m). 
+Because the object is dropped its initial speed is 0m/s. Assume that the acceleration due to gravity is 9.8m/s2. 
+You can use the formula vf =v2 i +2ad to compute the ?nal speed, vf, when the initial speed, vi, acceleration, a, and distance, d, are known.
+
+>>> from math import sqrt
+>>> G = 9.8
+>>> h = float(input("Height from which the object is dropped (in meters): "))
+Height from which the object is dropped (in meters): 30
+>>> vf = sqrt(2*G*h)
+>>> print("%.2f m/s." %vf)
+24.25 m/s.
+
+Exercise20: Ideal Gas Law
+The ideal gas law is a mathematical approximation of the behavior of gasses as pressure, volume and temperature change. 
+It is usually stated as: PV =nRT where P is the pressure in Pascals, V is the volume in liters, n is the amount of substance
+ in moles, R is the ideal gas constant, equal to 8.314 J mol K, and T is the temperature in degrees Kelvin. Write a program
+ that computes the amount of gas in moles when the user supplies the pressure, volume and temperature. Test your program by 
+determining the number of moles of gas in a SCUBA tank. A typical SCUBA tank holds 12 liters of gas at a pressure of 20,000,000 Pascals (approximately 3,000 PSI).
+ Room temperature is approximately 20 degrees Celsius or 68 degrees Fahrenheit.
+
+Hint: A temperature is converted from Celsius to Kelvin by adding 273.15 to it. To convert a temperature from Fahrenheit to Kelvin,
+ deduct 32 from it, multiply it by 5 9 and then add 273.15 to it.
+
+>>> R = 8.314
+>>> p = float(input("Enter the pressure: "))
+Enter the pressure: 20000000
+>>> v = float(input("Enter the volume: "))
+Enter the volume: 12
+>>> t = float(input("Enter the temp: "))
+Enter the temp: 293.15
+>>> n = (p*v)/(R*t)
+>>> print(n)
+98471.67447923153
+
+Exercise21: Area of a Triangle
+The area of a triangle can be computed using the following formula, where b is the length of the base of the triangle, and h is its height:
+area =b?h/2 Write a program that allows the user to enter values for b and h. The program should then compute and display thearea of atriangle with base lengthb and heighth.
+	
+>>> b = float(input("Enter the length of the base: "))
+Enter the length of the base: 4
+>>> h = float(input("Enter the heigth: "))
+Enter the heigth: 2.5
+>>> area = b*h/2
+>>> print("Area: ", area, "Length of the base: ", b, "Heigth: ", h)
+Area:  5.0 Length of the base:  4.0 Heigth:  2.5
+
+Exercise22: Area of a Triangle (Again)
+In the previous exercise you created a program that computed the area of a triangle when the length of its base 
+and its height were known. It is also possible to compute the area of a triangle when the lengths of all three sides are known.
+ Let s1, s2 and s3 be the lengths of the sides. Let s = (s1 +s2 +s3)/2. Then the area of the triangle can be calculated using the 
+following formula: area =v(s?(s-s1)?(s-s2)?(s-s3)) Develop a program that reads the lengths of the sides of a triangle from the user and displays its area.
+
+>>> from math import sqrt
+>>> s1 = float(input("Enter the s1: "))
+Enter the s1: 3
+>>> s2 = float(input("Enter the s2: "))
+Enter the s2: 4
+>>> s3 = float(input("Enter the s3: "))
+Enter the s3: 5
+>>> s = (s1+s2+s3)/2
+>>> area = sqrt((s*(s-s1)*(s-s2)*(s-s3)))
+>>> print("Area: ", area)
+Area:  6.0
+
+Exercise23: Area of a Regular Polygon
+A polygon is regular if its sides are all the same length and the angles between all of the adjacent sides are equal.
+ The area of a regular polygon can be computed using the following formula, where s is the length of a side and n is the number of sides:
+area =n?s^2/( 4?tg(?/n) )
+Write a program that reads s and n from the user and then displays the area of a regular polygon constructed from these values.
+
+>>> from math import tan, pi
+>>> s = float(input("Enter the length: "))
+Enter the length: 3
+>>> n = int(input("Enter the number of sides: "))
+Enter the number of sides: 4
+>>> area = (n*s**2) / (4*tan(pi/n))
+>>> print("The area of the polygon is", area)
+The area of the polygon is 9.000000000000002
+>>>
+
+
+Exercise24: Units of Time
+Create a program that reads a duration from the user as a number of days, hours, minutes, and seconds.
+ Compute and display the total number of seconds represented by this duration.
+
+>>> days = int(input("Enter a number of days: "))
+Enter a number of days: 1
+>>> hours = int(input("Enter a number of hours: "))
+Enter a number of hours: 3
+>>> minutes = int(input("Enter a number of minutes: "))
+Enter a number of minutes: 30
+>>> seconds = int(input("Enter a number of seconds: "))
+Enter a number of seconds: 15
+>>> SECONDS_IN_DAY = 86400
+>>> SECONDS_IN_HOUR = 3600
+>>> SECONDS_IN_MINUTE = 60
+>>> total_seconds = days*SECONDS_IN_DAY + hours*SECONDS_IN_HOUR + minutes*SECONDS_IN_MINUTE + seconds
+>>> print(total_seconds)
+99015
+
+
+Exercise25: Units of Time (Again)
+In this exercise you will reverse the process described in the previous exercise. 
+Develop a program that begins by reading a few seconds from the user. 
+Then your program should display the equivalent amount of time in the form D:HH:MM:SS,
+ where D, HH, MM, and SS represent days, hours, minutes and seconds respectively. 
+The hours, minutes and seconds should all be formatted so that they occupy exactly two digits, with a leading 0 displayed if necessary.
+
+>>> seconds = int(input("Enter a number of seconds: "))
+Enter a number of seconds: 132344543435
+>>> SECONDS_IN_DAY = 86400
+>>> SECONDS_IN_HOUR = 3600
+>>> SECONDS_IN_MINUTE = 60
+>>> days = seconds / SECONDS_IN_DAY
+>>> seconds = seconds % SECONDS_IN_DAY
+>>> hours = seconds / SECONDS_IN_HOUR
+>>> seconds = seconds % SECONDS_IN_HOUR
+>>> minutes = seconds / SECONDS_IN_MINUTE
+>>> seconds = seconds % SECONDS_IN_MINUTE
+>>> print("%d:%02d:%02d:%02d."% (days, hours, minutes, seconds))
+1531765:13:10:35.
+
+Exercise26: Current Time
+Python includes a library of functions for working with time, including a function called asctime in the time module.
+ It reads the current time from the computer’s internal clock and returns it in a human-readable format. 
+Write a program that displays the current time and date. Your program will not require any input from the user.
+
+>>> import time
+>>> localtime = time.asctime(time.localtime(time.time()))
+>>> print("Local current time: ", localtime)
+Local current time:  Wed Sep  9 14:39:48 2020
+
+Exercise27: Body Mass Index
+Write a program that computes the body mass index (BMI) of an individual. Your program should begin by reading 
+a height and weight from the user. Then it should use one of the following two formulas to compute the BMI before displaying it. 
+If you read the height in inches and the weight in pounds, then body mass index is computed using the following formula:
+BMI=w/h^2 ?703
+If you read the height in meters and the weight in kilograms, then body mass index is computed using this slightly simpler formula:
+BMI=w/h^2 
+
+>>> h = float(input("Enter your height(in meter): "))
+Enter your height: 163
+>>> m = float(input("Enter your weight(in kg): "))
+Enter your weight(in kg): 55
+>>> bmi = m/(h**2)
+>>> print("Your BMI: ", bmi)
+Your BMI:  0.002070081674131507
+
+Exercise28: Wind Chill
+When the wind blows in cold weather, the air feels even colder than it is because the movement 
+of the air increases the rate of cooling for warm objects, like people. This effect is known as wind chill. 
+In 2001, Canada, the United Kingdom and the United States adopted the following formula for computing the wind chill index.
+ Within the formula Ta is the air temperature in degrees Celsius and V is the wind speed in kilometers per hour. 
+A similar formula with different constant values can be used with temperatures in degrees Fahrenheit and wind speeds in miles per hour. 
+WCI =13.12+0.6215T_a  -11.37V^0.16  +0.3965T_a V^0.16 
+Write a program that begins by reading the air temperature and wind speed from the user. 
+Once these values have been read your program should display the wind chill index rounded to the closest integer.
+The wind chill index is only considered valid for temperatures less than or equal to 10 degrees Celsius and wind speeds exceeding 4.8 kilometers per hour.
+
+>>> temp = float(input("Enter the air temperature (Celsius): "))
+Enter the air temperature (Celsius): 22
+>>> speed = float(input("Enter the wind spped (km/hour): "))
+Enter the wind spped (km/hour): 15
+>>> wci = 13.12 + 0.6215*temp - 11.37*speed**0.16 + 0.3965*temp*speed**0.16
+>>> print("The wind chill index is", round(wci))
+The wind chill index is 23
+
+Exercise29: Celsius to Fahrenheit and Kelvin
+Write a program that begins by reading a temperature from the user in degrees Celsius.
+ Then your program should display the equivalent temperature in degrees Fahrenheit and degrees Kelvin.
+ The calculations needed to convert between different units of temperature can be found on the internet.
+
+>>> t = float(input("Enter temp in degrees Celsius: "))
+Enter temp in degrees Celsius: 30
+>>> kelvin = t + 273.15
+>>> fahrenheit = (t*9/5)+32
+>>> print("Kelvin: ", kelvin, "K,", "Fahrenheit", fahrenheit, "F")
+Kelvin:  303.15 K, Fahrenheit 86.0 F
+
+Exercise30: Units of Pressure
+In this exercise you will create a program that reads a pressure from the user in kilopascals. 
+Once the pressure has been read your program should report the equivalent pressure in pounds per square inch, 
+millimeters of mercury and atmospheres. Use your research skills to determine the conversion factors between these units.
+
+>>> kpa = float(input("Input pressure in kPa: "))
+Input pressure in kPa: 15
+>>> psi=kpa/6.894757
+>>> mmhg = kpa*760/101.325
+>>> atm = kpa/101.325
+>>> print("The pressure in pounds per square inch: %.2f psi" %psi)
+The pressure in pounds per square inch: 2.18 psi
+>>> print("The pressure in millimeter of mercury: %.2f mmHg" %mmhg)
+The pressure in millimeter of mercury: 112.51 mmHg
+>>> print("Atmosphere pressure: %.2f atm" %atm)
+Atmosphere pressure: 0.15 atm
+
+Exercise31: Sum of the Digits in an Integer
+Develop a program that reads a four-digit integer from the user and displays the sum of the digits in the number. 
+For example, if the user enters 3141 then your program should display 3+1+4+1=9.
+
+>>> b = int(input("Enter four-digit integer number: "))
+Enter four-digit integer number: 3141
+>>> first = b//1000
+>>> second = (b%1000)//100
+>>> third = (b%100)//10
+>>> four = b%10
+>>> sum = first + second + third + four
+>>> print("Sum: ", sum)
+Sum:  9
+
+Exercise32: Sort 3 Integers
+Create a program that reads three integers from the user and displays them in sorted order (from smallest to largest). 
+Use the min and max functions to ?nd the smallest and largest values. 
+The middle value can be found by computing the sum of all three values, and then subtracting the minimum value and the maximum value.
+
+>>> a = int(input())
+22
+>>> b = int(input())
+57
+>>> c = int(input())
+7
+>>> min_num = min(a,b,c)
+>>> max_num = max(a,b,c)
+>>> middle = a + b + c - min_num - max_num
+>>> print(min_num, middle, max_num)
+7 22 57
+
+
+Exercise33: Day Old Bread
+A bakery sells loaves of bread for $3.49 each. Day old bread is discounted by 60 percent.
+ Write a program that begins by reading the number of loaves of day-old bread being purchased from the user.
+Then your program should display the regular price for the bread, the discount because it is a day-old, and the total price. 
+All of the values should be displayed using two decimal places, and the decimal points in all of the numbers 
+should be aligned when reasonable values are entered by the user.
+
+>>> num_loaves = int(input())
+5
+>>> regular_price = num_loaves*3.49
+>>> discount = regular_price*0.6
+>>> total = regular_price - discount
+>>> print("Regular price: %5.2f"%regular_price)
+Regular price: 17.45
+>>> print("Discount: %5.2f" %discount)
+Discount: 10.47
+>>> print("Total: %5.2f" %total)
+Total:  6.98
+
+
+
+
+
+
+
+
+
